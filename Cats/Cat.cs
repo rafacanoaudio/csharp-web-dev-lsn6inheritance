@@ -15,6 +15,10 @@ namespace Cats
         }
 
         // On this line, add a no-argument constructor
+        public Cat()
+        {
+            Weight = 13.0;
+        }
 
         public void Sleep()
         {

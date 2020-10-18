@@ -14,6 +14,10 @@ namespace Cats
         }
 
         // On this line, write a constructor that uses the no-arg constructor in the Cat class.
+        public HouseCat(string name)
+        {
+            Name = name;
+        }
 
         public bool IsSatisfied()
         {
@@ -22,7 +26,14 @@ namespace Cats
 
         public override string Noise()
         {
-            return "Hello, my name is " + Name + "!";
+            if (IsSatisfied())
+            {
+                return "Hello, my name is " + Name + "!";
+            }
+            else
+            {
+                return base.Noise();
+            }
         }
 
         public string Purr()
